@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_css를 활용한 반응형 웹 코딩</title>
+    <style> 
+        /*
+        여기서 화면을 나누는 4가지의 기준은
+        부트스크랩에서 화면을 나누는 4가지 기준과 같다
+        */    
+        /* @media screen and (min-width: 1200px){
+            html, body{background-color: purple;}
+        }
+        @media screen and (min-width: 992px){
+            #wrap{width: 80%;}
+        }
+        @media screen and (min-width: 768px){
+            html, body{background-color: orange;}
+            #content_wrap #content {font-size: 1.5em;}
+        }
+        @media screen and (max-width: 767px){
+            html, body{background-color: pink;}
+            #content_wrap #content {font-size: 2em;}
+            nav ul li{width: 100%;}
+        } */
+        *{padding: 0;margin: 0;}
+        body {
+            background-color: pink;
+        }
+        #wrapper{
+            border: 1px solid gray;
+            width: 80%;
+            margin: 0 auto;
+            font-size: 2vw;
+            /*viewport with 가로의 뷰포트에 따라서 글씨가 달라지는 것*/
+        }
+        nav ul{
+            overflow: hidden;
+        }
+        nav li{
+            text-align: center;
+            list-style: none;
+            float: left;
+            border: 1px solid gray;
+            width: 20%;
+            box-sizing: border-box; /* 사각형이 가지고 있는 사이즈가 보더까지 포함이다 */
+        }
+        header h1{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        header{
+            padding:20px 0 0 0 ;
+            border: 1px gray solid;
+
+        }
+        .content {
+            padding: 10px;
+        }
+        footer{
+            border: 1px solid gray;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+        }
+        /*phone*/
+        @media (max-width: 767px) {
+            body{
+                background-color: darkcyan;
+            }
+            #wrapper{
+                width: 100%;
+                font-size: 1.5em;
+            }
+            nav li{
+                width: 100%;
+            }
+        }
+        /*tablet*/
+        @media (min-width: 768px) {
+            body{
+                background-color: coral;
+            }
+            #wrapper{
+                width: 80%;
+            }
+        }
+        /*laptop*/
+        @media (min-width:992px){
+            body{
+                background-color: lightblue;
+            }
+        }
+        /*큰 화면 컴*/
+        @media (min-width: 1200px) {
+            body{
+                background-color: rgb(218, 233, 85);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <h1>반응형 웹</h1>
+            <nav>
+                <ul>
+                    <li>menu1</li>
+                    <li>menu2</li>
+                    <li>menu3</li>
+                    <li>menu4</li>
+                    <li>menu5</li>
+                </ul>
+            </nav>
+        </header>
+        <div class="content">
+            <h2>반응형 웹은 미디어 쿼리를 
+                사용하여 스타일링합니다.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur
+                 adipisicing elit. Suscipit, quos dignissimos 
+                 corporis ab aspernatur sit dicta veritatis 
+                 officiis distinctio nam, dolorum neque ex 
+                 eum ea soluta ipsum voluptatum nesciunt 
+                 obcaecati!</p>
+        </div>
+        <footer>
+            <h1>designed by ksh</h1>
+        </footer>
+    </div>
+</body>
+</html>
