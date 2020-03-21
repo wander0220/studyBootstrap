@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이정도는 혼자서 해볼 수 있다고 슨생님이 준 숙제</title>
+    
+    <!-- 인터넷 익스플로어가 최신버전으로 깔려있으면 그걸로 보겠다. -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+ 
+    <!-- 부가적인 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+     
+    <style>
+        div{
+            border: solid gray 1px;
+        }
+        h1{
+            border: solid gray 0.5px;
+        }
+        /* 요놈을 알게되었다. :nth-of-type()는 row태그 중에 몇번째를 의미 */
+        .row:nth-of-type(1){
+            background-color: blue;
+        }
+        .row:nth-of-type(2){
+            background-color: lightblue;
+        }
+        .row:nth-of-type(3){
+            background-color: rgb(101, 196, 228);
+        }
+        .row:nth-of-type(4){
+            background-color: rgb(117, 117, 255);
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid text-center">
+        <div class="row">
+            <div class="col-xs-12"><h1>lorem</h1></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-8  col-xs-12"><h1>ipsum</h1></div>
+            <div class="col-sm-4  col-xs-12"><h1>dolor</h1></div>
+        </div>
+        <div class="row" >
+            <div class="col-sm-4 col-xs-12"><h1>ipsum</h1></div>
+            <div class="col-sm-4 col-xs-12"><h1>ipsum</h1></div>
+            <div class="col-sm-4 col-xs-12"><h1>dolor</h1></div>
+        </div>
+        <div class="row" >
+            <div class="col-xs-12"><h1>footer</h1></div>
+        </div>
+    </div>
+
+    <!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</body>
+</html>
