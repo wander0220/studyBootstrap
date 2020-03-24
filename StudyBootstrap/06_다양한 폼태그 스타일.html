@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06 부트스트랩의 다양한 폼태그 스타일</title>
+    <!-- 인터넷 익스플로어가 최신버전으로 깔려있으면 그걸로 보겠다. -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <!-- 부가적인 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+</head>
+<body>
+    <!-- http://bootstrapk.com/css/#forms-control-validation -->
+    <form class="col-xs-8">
+        <div class="form-group has-success">
+          <label for="exampleInputEmail1" 
+          class="control-label">이메일 주소</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="이메일을 입력하세요">
+        </div>
+        <div class="form-group has-warning">
+          <label for="exampleInputPassword1"
+          class="control-label">암호</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="암호">
+        </div>
+        <div class="form-group has-success has-feedback">
+            <label class="control-label col-sm-3" for="inputGroupSuccess2">
+                아이콘과 입력창</label>
+            <div class="col-sm-9">
+              <div class="input-group">
+                <span class="input-group-addon">@</span>
+                <input type="text" class="form-control" id="inputGroupSuccess2" aria-describedby="inputGroupSuccess2Status">
+              </div>
+              <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+              <span id="inputGroupSuccess2Status" class="sr-only">(success)</span>
+              .sr-only써주면 화면에 텍스트가 안보이고 화면해설?그런거에서는 들을 수 있게한다 꼭필요함! 
+            </div>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputFile">파일 업로드</label>
+          <input type="file" id="exampleInputFile">
+          <p class="help-block">여기에 블록레벨 도움말 예제</p>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox"> 입력을 기억합니다
+          </label>
+        </div>
+        <button type="submit" class="btn btn-default">제출</button>
+    </form>
+
+    <!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</body>
+</html>
