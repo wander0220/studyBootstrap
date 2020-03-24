@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04 그리드의 다양한 옵션</title>
+    <!-- 인터넷 익스플로어가 최신버전으로 깔려있으면 그걸로 보겠다. -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <!-- 부가적인 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <style>
+    </style>
+</head>
+<body>
+    <!--offset
+    <div class="row">
+        <div class="col-md-4">
+            .col-md-4
+        </div>
+        <div class="col-md-4 col-md-offset-4">
+            col-md-4 col-md-offset-4
+        </div>
+    </div> -->
+
+    <!-- ordering
+    <div class="row">
+        <div class="col-xs-6 col-push-9">
+            col-push-9
+        </div>
+        <div class="col-xs-6 col-pull-3">
+            col-pull-3
+        </div>
+    </div> -->
+
+    <!-- nesting
+    <div class="row col-md-12">
+        <div class="row col-md-2" style="background-color: blanchedalmond;"></div>
+        <div class="row col-md-4" style="background-color: chocolate;"></div>
+    </div> -->
+
+    <!--헷갈리네 : 컴퓨터 데스크탑 md lg 타블렛 sm 폰 xs  -->
+    <div class="container">
+        <div class="h2 col-sm-12 text-center text-muted bg-info img-rounded">
+            GOOD SOUP RESTAURANT
+        </div>
+        <div class="col-sm-4 col-md-2 text-primary col-md-push-10
+        bg-danger img-rounded">
+            <ul class="text-center list-unstyled">
+                <li><a href="#">파스타</a></li>
+                <li><a href="#">피자</a></li>
+                <li><a href="#">샐러드</a></li>
+                <li><a href="#">음료</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-6 col-sm-offset-2 col-md-6 col-md-offset-1 
+        bg-warning img-rounded ">
+            <div class="row">
+                <div class="col-sm-6 bg-success">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Corrupti illum
+                        voluptatum voluptatibus enim sit consectetur 
+                        ut dignissimos doloribus quam mollitia.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Corrupti illum
+                        voluptatum voluptatibus enim sit consectetur 
+                        ut dignissimos doloribus quam mollitia.
+                    </p>
+                </div>
+                <div class="col-sm-6 bg-warning">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Corrupti illum
+                        voluptatum voluptatibus enim sit consectetur 
+                        ut dignissimos doloribus quam mollitia.
+                    </p>
+                    <div class="row">
+                        <div class="col-sm-6 bg-primary">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Corrupti illum
+                                voluptatum voluptatibus enim sit consectetur 
+                                ut dignissimos doloribus quam mollitia.
+                            </p>
+                        </div>
+                        <div class="col-sm-6 bg-danger">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Corrupti illum
+                                voluptatum voluptatibus enim sit consectetur 
+                                ut dignissimos doloribus quam mollitia.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-2 col-md-offset-1 col-md-pull-10
+        bg-primary img-rounded">
+            <ul class="text-center list-unstyled">
+                <li>메인쉐프 멤버</li>
+                <li>배주현</li>
+                <li>강슬기</li>
+                <li>손승완</li>
+                <li>박수영</li>
+                <li>김예림</li>
+            </ul>
+        </div>
+        <div class="h2 col-xs-12 text-center img-thumbnail">
+            이용해 주셔서 감사합니다.
+        </div> 
+    </div>
+
+    <!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</body>
+</html>
