@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그리드 시스템을 활용한 이미지 넣기 실습</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <!-- IE8 에서 HTML5 요소와 미디어 쿼리를 위한 HTML5 shim 와 Respond.js -->
+    <!-- WARNING: Respond.js 는 당신이 file:// 을 통해 페이지를 볼 때는 동작하지 않습니다. -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        div{
+            border: red solid 0.5px;
+        }
+        #img1{
+            background-image: url(http://ghavpdlwl.blob.core.windows.net/day6/day6_teaser_mn8342398cn908sd_11.jpg);
+            width: 100%; height: 650px; 
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        #img2{
+            background-image: url(http://ghavpdlwl.blob.core.windows.net/day6/6DAY6_1.jpg);
+            width: 100%; height: 650px;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>그리드 시스템을 활용한 이미지 레이아웃</h1>
+        <h2>근데 이미지 크기 좀 달라서 예제와 잘 맞지는 않음</h2>
+        <div class="row">
+            <div class="col-md-3 col-xs-6">
+                <img src="http://ghavpdlwl.blob.core.windows.net/day6/1_Dowoon_150.jpg" 
+                alt="어떻게 말해 도운" width="250">
+            </div>
+            <div class="col-md-3 col-xs-6">
+                <img src="http://ghavpdlwl.blob.core.windows.net/day6/5_Sungjin_150.jpg" 
+                alt="어떻게 말해 성진" width="250">
+            </div>
+            <div class="col-md-3 col-xs-6">
+                <img src="http://ghavpdlwl.blob.core.windows.net/day6/day6_teaser_mn8342398cn908sd_09_s.jpg" 
+                alt="예뻤어 JAE" width="250">
+            </div>
+            <div class="col-md-3 col-xs-6">
+                <img src="http://ghavpdlwl.blob.core.windows.net/day6/day6_teaser_mn8342398cn908sd_08_s.jpg" 
+                alt="예뻤어 Young K" width="250">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6" id="img1" class="img-responsive"></div>
+            <div class="col-sm-6" id="img2" class="img-responsive"></div>
+        </div>
+    </div>
+    <!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</body>
+</html>
