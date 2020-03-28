@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 유틸리티 따라하기</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <!-- IE8 에서 HTML5 요소와 미디어 쿼리를 위한 HTML5 shim 와 Respond.js -->
+    <!-- WARNING: Respond.js 는 당신이 file:// 을 통해 페이지를 볼 때는 동작하지 않습니다. -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .padding50{
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        .bor{
+            margin-top: 20px;
+            padding-top: 10px;
+            border-top: gray solid 1px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col-lg-12 bg-info text-center">
+                <h2>그리드 시스템이 가지고 있는 기본 패딩, 마진 값</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 hidden-xs bg-success">
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur 
+                        adipisicing elit. Veniam, minus ipsum 
+                        laborum quasi qui sed. Veniam maiores 
+                        sunt id consectetur!
+                    </p>
+                </div>
+                <div class="col-lg-4 bg-warning">
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur 
+                        adipisicing elit. Veniam, minus ipsum 
+                        laborum quasi qui sed. Veniam maiores 
+                        sunt id consectetur!
+                        Lorem ipsum, dolor sit amet consectetur 
+                        adipisicing elit. Veniam, minus ipsum 
+                        laborum quasi qui sed. Veniam maiores 
+                        sunt id consectetur!
+                    </p>
+                    <p class="bg-primary hidden-lg">
+                        Lorem ipsum, dolor sit amet consectetur 
+                        adipisicing elit. Veniam, minus ipsum 
+                        laborum quasi qui sed. Veniam maiores 
+                        sunt id consectetur!
+                    </p>
+                </div>
+                <div class="col-lg-4 bg-danger">
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur 
+                        adipisicing elit. Veniam, minus ipsum 
+                        laborum quasi qui sed. Veniam maiores 
+                        sunt id consectetur!
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>여기는 푸터가 들어가는 곳입니다.</h2>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 bg-info ">
+                <div class="text-center padding50">
+                    <h2>그리드 시스템이 가지고 있는 기본 패딩, 마진 값</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3 bg-success hidden-xs">
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur 
+                    adipisicing elit. Veniam, minus ipsum 
+                    laborum quasi qui sed. Veniam maiores 
+                    sunt id consectetur!
+                </p>
+            </div>
+            <div class="col-sm-6 ">
+                <div class="row">
+                    <div class="col-xs-12 bg-warning">
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur 
+                            adipisicing elit. Veniam, minus ipsum 
+                            laborum quasi qui sed. Veniam maiores 
+                            sunt id consectetur!
+                            Lorem ipsum, dolor sit amet consectetur 
+                            adipisicing elit. Veniam, minus ipsum 
+                            laborum quasi qui sed. Veniam maiores 
+                            sunt id consectetur!
+                            Lorem ipsum, dolor sit amet consectetur 
+                            adipisicing elit. Veniam, minus ipsum 
+                            laborum quasi qui sed. Veniam maiores 
+                            sunt id consectetur!
+                            Lorem ipsum, dolor sit amet consectetur 
+                            adipisicing elit. Veniam, minus ipsum 
+                            laborum quasi qui sed. Veniam maiores 
+                            sunt id consectetur!
+                        </p>
+                    </div>
+                    <div class="col-xs-12 bg-primary hidden-lg">
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur 
+                            adipisicing elit. Veniam, minus ipsum 
+                            laborum quasi qui sed. Veniam maiores 
+                            sunt id consectetur!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 bg-danger">
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur 
+                    adipisicing elit. Veniam, minus ipsum 
+                    laborum quasi qui sed. Veniam maiores 
+                    sunt id consectetur!
+                    Lorem ipsum dolor sit amet.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 text-center bor">
+                <h2>여기는 푸터가 들어가는 곳입니다.</h2>
+            </div>
+        </div>
+    </div>
+    
+    <!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</body>
+</html>
