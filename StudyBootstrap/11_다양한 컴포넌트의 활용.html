@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다양한 컴포넌트(글리피콘, 드랍다운, 네비게이션)의 활용</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <!-- IE8 에서 HTML5 요소와 미디어 쿼리를 위한 HTML5 shim 와 Respond.js -->
+    <!-- WARNING: Respond.js 는 당신이 file:// 을 통해 페이지를 볼 때는 동작하지 않습니다. -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        body{
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Glyphicon</h1>
+    <h3>인라인 요소인 span 태그</h3>
+    <span class="glyphicon glyphicon-cloud"></span>
+    <button type="button" class="btn btn-danger">
+        <span class="glyphicon glyphicon-music"></span>
+        MUSIC
+    </button>
+
+    <h1>드랍다운 드랍업</h1>
+    <h3>div 이름을 dropdown이랑 dropup으로 해주면 되는뎁...</h3>
+    <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle"
+        type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+            <span class="caret"></span>
+            dropdown
+        </button>
+        <ul class="dropdown-menu"
+        role="menu" aria-labelledby="dropdownMenu1">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+        </ul>
+    </div>
+    <div class="dropup">
+        <button class="btn btn-default dropdown-toggle"
+        type="button" id="dropuoMenu1" data-toggle="dropdown" aria-expanded="true">
+            <span class="caret"></span>
+            dropdown
+        </button>
+        <ul class="dropdown-menu"
+        role="menu" aria-labelledby="dropdownMenu1">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+        </ul>
+    </div>
+
+    <div class="dropdown">
+        <button class="btn btn-default" data-toggle="dropdown" >
+            <!-- aria-expanded 의 값이 false 이면 내용이 
+                축소된 상태를 의미합니다. 
+                aria-expanded 의 값이 true 이면 내용이 
+                확장된 상태를 의미합니다.  -->
+            <span class="caret"></span>
+            hi
+        </button>
+        <ul class="dropdown-menu" role="menu">
+            <li>bye</li>
+            <li>hello</li>
+            <li>lol</li>
+        </ul>
+    </div>
+
+    <h2>드랍다운 정렬</h2>
+    <h3>기본으로는 왼쪽 정렬</h3>
+    <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle"
+        type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+            <span class="caret"></span>
+            dropdown
+        </button>
+        <ul class="dropdown-menu dropdown-menu-right"
+        role="menu" aria-labelledby="dropdownMenu1">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+        </ul>
+    </div>
+
+    <h2>드랍다운 헤더(비활성화) & 구분선</h2>
+    <div class="dropup">
+        <button class="btn btn-default dropdown-toggle"
+        type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+            <span class="caret"></span>
+            dropdown
+        </button>
+        <ul class="dropdown-menu"
+        role="menu" aria-labelledby="dropdownMenu1">
+            <li role="presentation" class="dropdown-header disabled"><a role="menuitem" tabindex="-1" href="#">header1</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+            <li role="presentation" class="divider"></li>
+            <li role="presentation" class="dropdown-header"><a role="menuitem" tabindex="-1" href="#">header2</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+        </ul>
+    </div>
+
+    <h1>네비게이션</h1>
+    <h3>탭형</h3>
+    <ul class="nav nav-tabs">
+        <li role="presentation" class="active"><a href="#">HOME</a></li>
+        <li role="presentation"><a href="#">홈</a></li>
+        <li role="presentation"><a href="#">house</a></li>
+    </ul>
+    <h4>탭 수직형 (별로안쓸듯;;)</h4>
+    <ul class="nav nav-tabs nav-stacked">
+        <li role="presentation" class="active"><a href="#">HOME</a></li>
+        <li role="presentation"><a href="#">홈</a></li>
+        <li role="presentation"><a href="#">house</a></li>
+    </ul>
+    <h3>알약형 Pills</h3>
+    <ul class="nav nav-pills">
+        <li role="presentation" class="active"><a href="#">HOME</a></li>
+        <li role="presentation"><a href="#">홈</a></li>
+        <li role="presentation"><a href="#">house</a></li>
+    </ul>
+    <h4>알약수직형</h4>
+    <ul class="nav nav-pills nav-stacked">
+        <li role="presentation" class="active"><a href="#">HOME</a></li>
+        <li role="presentation"><a href="#">홈</a></li>
+        <li role="presentation"><a href="#">house</a></li>
+    </ul>
+
+    <h3>양쪽 정렬된 탭 알약형 .nav-justified</h3>
+    <h3>탭형</h3>
+    <ul class="nav nav-tabs nav-justified">
+        <li role="presentation" class="active"><a href="#">HOME</a></li>
+        <li role="presentation"><a href="#">홈</a></li>
+        <li role="presentation"><a href="#">house</a></li>
+    </ul>
+    <h3>알약형 Pills</h3>
+    <ul class="nav nav-pills nav-justified">
+        <li role="presentation" class="active"><a href="#">HOME</a></li>
+        <li role="presentation"><a href="#">홈</a></li>
+        <li role="presentation"><a href="#">house</a></li>
+    </ul>
+
+    <h3>네비게이션에 드롭다운 을 넣고싶다면...</h3>
+    <ul class="nav nav-tabs nav-justified">
+        <li role="presentation" class="active"><a href="#">HOME</a></li>
+        <li role="presentation"><a href="#">홈</a></li>
+        <li role="presentation dropdown">
+            <a class="btn btn-default dropdown-toggle"
+            type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                <span class="caret"></span>
+                dropdown
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right"
+            role="menu" aria-labelledby="dropdownMenu1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+            </ul>
+        </li>
+    </ul>
+
+    <h1>w3school에서 있는 실제 예제</h1>
+    <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+        <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
+        <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
+      </ul>
+      
+      <div class="tab-content">
+        <div id="home" class="tab-pane fade in active">
+          <h3>HOME</h3>
+          <p>Some content.</p>
+          <img src="https://pbs.twimg.com/media/DdvXIASV4AARGDX.jpg" 
+          alt="떵딘" width="30%">
+        </div>
+        <div id="menu1" class="tab-pane fade">
+          <h3>Menu 1</h3>
+          <p>Some content in menu 1.</p>
+        </div>
+        <div id="menu2" class="tab-pane fade">
+          <h3>Menu 2</h3>
+          <p>Some content in menu 2.</p>
+        </div>
+    </div>
+
+    <!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</body>
+</html>
