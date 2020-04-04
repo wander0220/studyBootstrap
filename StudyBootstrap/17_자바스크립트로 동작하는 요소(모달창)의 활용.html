@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트로 동작하는 요소(모달창)의 활용</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <!-- IE8 에서 HTML5 요소와 미디어 쿼리를 위한 HTML5 shim 와 Respond.js -->
+    <!-- WARNING: Respond.js 는 당신이 file:// 을 통해 페이지를 볼 때는 동작하지 않습니다. -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        #myModal2{
+            position: relative;
+            top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>모달... (두둥..)</h1>
+    <p>
+        버튼을 클릭하면 컨텐츠 창이 뜨면서 배경화면이 비활성화
+        되고 컨텐츠 창을 닫으면 원래로 돌아가는 형태
+    </p>
+
+    <button type="button" class="btn btn-danger btn-lg"
+    id="whatIsIt">
+        무슨버튼일까
+    </button>
+
+    <h1>모달창의 기본 활용법</h1>
+    <!-- Button trigger modal -->
+    <button type="button" 
+    class="btn btn-info btn-lg" 
+    data-toggle="modal" 
+    id="DS">
+        밥성진
+    </button>
+
+    <!-- Modal -->
+    <!-- 아래 .fade는 위에서 아래로 내려가는 애니메이션 효과  -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">BOB the builder</h4>
+            </div>
+            <div class="modal-body">
+                <img src="https://img.theqoo.net/img/qLzAI.jpg" 
+                alt="박성진 어렸을 때"
+                width="300px">
+                <p>
+                  어떻게 이렇게 귀여운 애기가 있었죠..?<br>
+                  아 지금은 이 애기는 너무 큰 성인이 되었습니다.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" 
+                data-dismiss="modal">닫기</button>
+                <a href="https://twitter.com/DAY6_BOBSUNGJIN"
+                type="button" class="btn btn-primary" 
+                target="_blank">
+                  지금 모습 확인하기
+                </a>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <h1>자바 스크립트를 활용하여 모달 구현하기</h1>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-warning btn-lg" 
+    data-toggle="modal" id="EOY">
+        어쩌다 발견한 하루
+    </button>
+  
+    <!-- Modal -->
+    <div class="modal fade" id="myModal2" 
+    tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">댓글을 달아주세요</h4>
+          </div>
+          <div class="modal-body">
+            여러분의 참여가 더 사랑스러운 캐릭터를 만듭니다.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <a type="button" class="btn btn-info" 
+            target="_blank"
+            href="http://www.imbc.com/broad/tv/drama/extraordinaryyou/">
+                홈페이지 바로가기
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section>
+        상단의 버튼을 클릭하여 원하는 
+        원하는 역할을 수행해 보세요
+    </section>
+    
+
+    <!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#DS").click(function(){
+                $('#myModal').modal({
+                    backdrop:"static",
+                    keyboard:false
+                })
+            })
+            $("#EOY").click(function(){
+                $('#myModal2').modal({
+                    backdrop:false
+                })
+            })
+        })
+        // $("#whatIsIt").click(function(){
+        //     $("#EOY").modal("hide")
+        // })
+        
+        //이벤트 추가하기 음... 헷갈리네요
+        $('#myModal').on('hidden.bs.modal', function (e) {
+            $(window).alert("치명적인 귀여움..");
+        })
+    </script>
+</body>
+</html>
