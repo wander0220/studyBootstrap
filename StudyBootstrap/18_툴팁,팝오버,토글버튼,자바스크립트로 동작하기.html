@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>툴팁, 팝오버, 토글버튼, 자바스크립트로 동작하기</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <!-- IE8 에서 HTML5 요소와 미디어 쿼리를 위한 HTML5 shim 와 Respond.js -->
+    <!-- WARNING: Respond.js 는 당신이 file:// 을 통해 페이지를 볼 때는 동작하지 않습니다. -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <h1>툴팁</h1>
+    <!-- HTML to write -->
+    <!-- 헐 지금까지 아래 div로 툴팁 넣은 줄 알았는데 이 a태그였음.. -->
+    <a href="#" data-toggle="tooltip" 
+    title="말풍선의 내용을 바꿔볼까요" data-placement="right">
+        Hover over me
+    </a>
+
+    <!-- Generated markup by the plugin -->
+    <!-- <div class="tooltip top" role="tooltip">
+        <div class="tooltip-arrow"></div>
+        <div class="tooltip-inner">
+          Some tooltip text!
+        </div>
+    </div> -->
+
+
+    <button type="button" id="left" class="btn btn-default" data-animation="false" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>  
+    <button type="button" id="top"class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
+    <button type="button" id="bottom" class="btn btn-default" data-toggle="tooltip" data-placement="bottom">Tooltip on bottom</button>
+    <button type="button" id="right" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
+    
+    <h1>팝오버</h1>
+    <h3>툴팁이랑 비슷하지만 뭔가 더 컨텐츠가 많은 느낌..<br>
+        헤더랑 바디랑 분리되어있는 느낌
+    </h3>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <button type="button" class="btn btn-default" 
+    data-container="body" data-toggle="popover" 
+    data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+        Popover on left
+    </button>
+
+    <button type="button" class="btn btn-default" 
+    data-container="body" data-toggle="popover" 
+    data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+      Popover on top
+    </button>
+    
+    <button type="button" class="btn btn-default" 
+    data-container="body" data-toggle="popover" 
+    data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+      Popover on bottom
+    </button>
+
+    <button type="button" class="btn btn-default" 
+    data-container="body" data-toggle="popover" 
+    data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+      Popover on right
+    </button>
+
+    <h1>단일토글</h1>
+    <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+        Single toggle
+    </button>
+
+    <h1>라디오 체크박스</h1>
+    <h3>자기자신 다시 누르면 선택해제</h3>
+    <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-primary active">
+          <input type="checkbox" autocomplete="off" checked> Checkbox 1 (pre-checked)
+        </label>
+        <label class="btn btn-primary">
+          <input type="checkbox" autocomplete="off"> Checkbox 2
+        </label>
+        <label class="btn btn-primary">
+          <input type="checkbox" autocomplete="off"> Checkbox 3
+        </label>
+    </div>
+    <h3>얘는 자신을 선택하고 다시 선택해도 선택해제 안됨
+         자기 말고 다른거 선택해야 해제
+    </h3>
+    <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-primary active">
+          <input type="radio" name="options" id="option1" autocomplete="off" checked> Radio 1 (preselected)
+        </label>
+        <label class="btn btn-primary">
+          <input type="radio" name="options" id="option2" autocomplete="off"> Radio 2
+        </label>
+        <label class="btn btn-primary">
+          <input type="radio" name="options" id="option3" autocomplete="off"> Radio 3
+        </label>
+    </div>
+
+    <input type="checkbox">
+    <input type="radio">
+    
+    <!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script>
+        //jQuery를 활용하겠다는 코드임 이거 넣어주니까 이쁜 툴팁이 되었습니다.
+        $(function () {
+            //아래코드 데이터 토글이 툴팁인 애들인 애들 전부한테 하는 코드
+            //$('[data-toggle="tooltip"]').tooltip();
+            $("#left").click(function(){
+                $('#left').tooltip('show');
+            })
+            $("#right").hover(function(){
+                $('#right').tooltip({
+                    'placement':'bottom'
+                });
+            })
+            $("#bottom").tooltip({
+                'title':'툴팁의 내용을 옵션으로도 줄 수 있읍^~^'
+            });
+            $("#top").tooltip();
+            //hidden.bs.tooltip->top버튼위에 마우스를 올리고 툴팁 뜨고 내렸을 때(툴팁이 사라졌을 때) alert창 내려옴
+            $('#top').on('hidden.bs.tooltip', 
+                function () {
+                alert("해당하는 말풍선의 내용이 궁금하다면 관련 웹사이트를 방문해라.");
+            })
+        })
+        $('[data-toggle="popover"]').popover({
+            //option
+            'trigger':'hover'
+        });
+    </script>
+</body>
+</html>
